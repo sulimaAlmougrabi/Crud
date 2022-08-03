@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/all.min.css">
+</head>
+
+<body>
+    <div class="container pt-5">
+        <div class="row p-5 shadow">
+            <div class="col-md-6">
+                <div class="d-flex align-content-center h-100 ">
+                    <img src="Image/2021-04-09 (2).png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1>CRUD SYSTEM</h1>
+                <label>Product name:</label>
+                <input type="text" id="pname" class="form-control mb-3">
+                <label>Product category:</label>
+                <input type="text" id="pcategory" class="form-control mb-3">
+                <label>Product price:</label>
+                <input type="text" id="pprice" class="form-control mb-3">
+                <label>Product description:</label>
+                <textarea id="pdescription" class="form-control mb-3"></textarea>
+                <button onclick="addProduct()" id="mainBtn" class="btn w-100"
+                    style="background-color: #ffb1a4; color: #ffffff;">Add product</button>
+                    <p class="pt-2">
+                        <a data-toggle="collapse" href="#multiCollapseExample1"
+                            aria-expanded="false" aria-controls="multiCollapseExample1" style="color:#ffb1a4">See all requests </a>
+                    </p>
+            </div>
+        </div>
+    </div>
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <input type="text" id="searchInp" onkeyup="search()" placeholder="Search...."
+                    class="form-control w-25 mt-5 mx-auto">
+                <div class="d-flex justify-content-center">
+                    <table class="table table-bordered mt-3 text-center" style="width: 90%;">
+                        <thead>
+                            <th>Index</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/crud.js"></script>
+</body>
+
+</html>
